@@ -12,6 +12,8 @@
   </div>
 </template>
 
+<!-- //// delete file -->
+
 <style scoped>
 .item {
   margin-top: 2rem;

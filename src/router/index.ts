@@ -10,7 +10,12 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/about',
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/LoginView.vue')
+    },
+    {
+      path: '/about', //// needed?
       name: 'about',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
