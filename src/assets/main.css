@@ -5,7 +5,11 @@
 /* //// review */
 
 html {
-  @apply bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-100;
+  @apply h-full bg-white text-gray-900;
+}
+
+body {
+  @apply h-full;
 }
 
 #app {
