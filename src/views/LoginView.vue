@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useLoginUserStore } from '@/stores/loginUser'
 import { useRouter } from 'vue-router'
+import NeButton from '../components/common/NeButton.vue' ////
 
 const router = useRouter()
 router.push('/dashboard')
@@ -13,12 +14,17 @@ function login() {
 </script>
 
 <template>
-  <div class="flex min-h-full flex-1">
+  <div class="flex min-h-full h-screen flex-1 bg-gray-950">
     <div
       class="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24"
     >
       <div class="mx-auto w-full max-w-sm lg:w-96">
-        <div class="bg-white px-6 py-12 shadow sm:rounded-lg sm:px-12">
+        <div class="bg-gray-50 px-6 py-12 shadow sm:rounded-lg sm:px-12">
+          <!-- logo //// -->
+          <div class="text-xl text-gray-900">Welcome</div>
+          <div class="text-sm text-gray-700">
+            Sign in to Nethsecurity, secure your network and access the cloud quickly.
+          </div>
           <form class="space-y-6" action="#" method="POST">
             <div>
               <label for="email" class="block text-sm font-medium leading-6 text-gray-900"
@@ -64,20 +70,19 @@ function login() {
               </div>
 
               <div class="text-sm leading-6">
-                <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500"
-                  >Forgot password?</a
-                >
+                <a href="#" class="font-semibold text-cyan-700 hover:cyan-800">Need help?</a>
               </div>
             </div>
 
             <div>
-              <button
+              <!-- <button //// 
                 type="submit"
                 @click="login"
                 class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Sign in
-              </button>
+              </button> -->
+              <NeButton kind="primary" @click="login" class="w-full">Sign in</NeButton>
             </div>
           </form>
         </div>
@@ -210,7 +215,7 @@ function login() {
     <div class="relative hidden w-0 flex-1 lg:block">
       <img
         class="absolute inset-0 h-full w-full object-cover"
-        src="https://images.unsplash.com/photo-1496917756835-20cb06e75b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
+        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
         alt=""
       />
     </div>
